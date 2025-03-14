@@ -1,2 +1,1 @@
-# Library_Date
-A C++ library for representing and manipulating dates using Object-Oriented Programming (OOP).
+Date is a C++ library that leverages Object-Oriented Programming (OOP) to provide an easy and efficient way to handle dates. This library offers advanced functionalities for creating, modifying, formatting, and performing calculations on dates, such as adding or subtracting days, months, and years.
