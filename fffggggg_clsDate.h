@@ -616,12 +616,24 @@ class clsData {
             f = clsStr::static_replace(f, "yyyy", to_string(d._year));
             f = clsStr::static_replace(f, "mm", to_string(d._month));
             f = clsStr::static_replace(f, "dd", to_string(d._day));
-
+            
             return f;
         }
-
+        
         string format(string f){
             return format(*this, f);
+        }
+        
+        static string format_time_now(string f){
+            time_t t = time(0);
+            tm *p_t = localtime(&t);
+            
+            f = clsStr::static_lower(f);
+            f = clsStr::static_replace(f, "hh", to_string(p_t->tm_hour));
+            f = clsStr::static_replace(f, "mm", to_string(p_t->tm_min));
+            f = clsStr::static_replace(f, "ss", to_string(p_t->tm_sec));
+            
+            return f;
         }
 
 };
